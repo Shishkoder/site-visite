@@ -1,0 +1,41 @@
+.my-photo {
+    max-width: 200px;
+}
+
+.footer {
+    background-color: #2e0e57; /* Тёмно-серый фон */
+    padding: 1rem;
+}
+
+.social-icons a {
+    font-size: 2.5em; /* Размер иконок */
+    margin: 10px;
+}
+
+.social-icons a:hover {
+    color: #ffcc00; /* Цвет при наведении */
+}
+
+.description {
+    font-size: 14pt;
+}
+
+/* Стиль для карточек */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Динамический размер текста через calc(), зависящий от размера карточки */
+.article-card h4 {
+    font-size: calc(1rem + 0.5vw); /* Заголовок изменяет размер пропорционально */
+}
+
+.article-card p {
+    font-size: calc(0.875rem + 0.3vw); /* Основной текст адаптируется к размеру карточки */
+}

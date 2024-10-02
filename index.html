@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="static/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <title>Сайт Эльдара Шамсиева</title>
+</head>
+<body>
+<!-- Шапка сайта с меню навигации -->
+<header class="mb-5">
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html">Мой сайт</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="burger-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/articles.html">Статьи</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <!-- Главная секция с фото и лозунгом -->
+    <div class="container-lg">
+        <img src="static/img/main_picture.jpeg" alt="Моя фотография" class="img-fluid rounded-pill my-photo">
+        <h1 class="display-4">Привет! Меня зовут Эльдар Шамсиев</h1>
+        <p class="lead">Это мой сайт-визитка. Добро пожаловать!</p>
+    </div>
+
+    <!-- Дополнительная секция для информации -->
+    <div class="container-lg my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Обо мне</h3>
+                <p class="text-warning description">Гений, плейбой, филантроп. Люблю рыбалку. Занимался народными танцами — могу исполнить лезгинку на вашей свадьбе (недорого)</p>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Мои навыки</h3>
+                <p class="text-warning description">Способен укрощать змей. Немного умею в Data Science.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Свяжитесь со мной</h3>
+                <p class="text-warning description">Всегда открыт к новым предложениям. Просто оставьте своё сообщение в контактной форме ниже.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Футер с иконками соцсетей, картой и формой обратной связи -->
+<footer class="footer">
+    <div class="container-lg">
+        <div class="row text-center text-lg-start">
+            <!-- Соцсети (иконки) -->
+            <div class="col-lg-3 mb-3 social-icons">
+                <h3>Подписывайтесь на меня:</h3>
+                <a href="https://vk.com/shishkoder"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/Shishkoder"><i class="fab fa-telegram"></i></a>
+                <a href="https://github.com/Shishkoder"><i class="fab fa-github"></i></a>
+            </div>
+
+            <!-- Карта -->
+            <div class="col-lg-5 mb-3">
+                <h3>Моя геолокация:</h3>
+                <div id="map" style="width:100%;height:75%;">
+                    <!-- Карта будет добавлена позже -->
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                ymaps.ready(init);
+
+                function init() {
+                    // Координаты (широта, долгота) для статического адреса (Москва, Красная площадь)
+                    var myMap = new ymaps.Map("map", {
+                        center: [54.897765114450976, 52.286878440203424], // Координаты центра карты
+                        zoom: 16 // Уровень масштабирования карты
+                    });
+
+                    // Создание метки
+                    var myPlacemark = new ymaps.Placemark([54.897765114450976, 52.286878440203424], {
+                        balloonContent: 'ПАО "Татнефть", Альметьевск'
+                    }, {
+                        preset: 'islands#icon',
+                        iconColor: '#0095b6'
+                    });
+
+                    // Добавление метки на карту
+                    myMap.geoObjects.add(myPlacemark);
+                }
+            </script>
+
+            <!-- Форма обратной связи -->
+            <div class="col-lg-4 mb-3">
+                <h3>Свяжитесь со мной</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+                    </div>
+
+                    <div class="mb-3 has-danger">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email"
+                               placeholder="Введите ваш email">
+                        <div class="invalid-feedback">Некорректно введён email!</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="3"
+                                  placeholder="Введите ваше сообщение"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-light" onclick="alert">Отправить</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="static/js/bootstrap.bundle.js"></script>
+<script src="static/js/script.js"></script>
+
+</body>
+</html>

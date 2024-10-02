@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <title>Обо мне</title>
+</head>
+<body>
+<!-- Шапка сайта с меню навигации -->
+<header class="mb-5">
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-lg">
+            <a class="navbar-brand" href="../index.html">Мой сайт</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="burger-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="articles.html">Статьи</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Основной контент страницы (Main) -->
+<main class="container my-5">
+    <!-- Блок с текстом о научной деятельности -->
+    <div class="container mb-5">
+        <h2 class="mb-4">Люблю заниматься научной деятельностью. Мой конёк — <i>Data Science.</i></h2>
+        <figure class="text-end">
+            <blockquote class="blockquote">
+                <p class="mb-0">Учиться, учиться и ещё раз учиться</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Великий коммунист <cite title="Ленин">дедушка Ленин</cite>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- Секция с карточками статей -->
+    <div class="container-lg">
+        <h2 class="text-center mb-2">Мои статьи</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card article-card border-light mb-3">
+                    <div class="card-header">
+                        <a href="https://www.elibrary.ru/item.asp?id=45680747" class="btn btn-link">Читаем статью</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Нефтяное образование</h4>
+                        <p class="card-text">В этой статье говориться об истории и перспективе развития нефтяного образования в РТ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card article-card border-light mb-3">
+                    <div class="card-header">
+                        <a href="https://www.elibrary.ru/item.asp?id=48286238" class="btn btn-link">Читаем статью</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Моделирование истечения сверхзвукового потока газа из сопла Лаваля</h4>
+                        <p class="card-text">При разработке газоразрядной камеры со сверхзвуковым потоком газа проведен расчет конфигурации сверхзвукового сопла Лаваля.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card article-card border-light mb-3">
+                    <div class="card-header">
+                        <a href="https://www.elibrary.ru/item.asp?id=49853512" class="btn btn-link">Читаем статью</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">ИС для повышения эффективности эксплуатации нефтяных скважин</h4>
+                        <p class="card-text">Разработка АИС для повышения эффективности эксплуатации нефтяных скважин за счёт улучшения качества планирования производственно-технических мероприятий.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card article-card border-light mb-3">
+                    <div class="card-header">
+                        <a href="https://www.elibrary.ru/item.asp?id=49432613" class="btn btn-link">Читаем статью</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Анализ заболевания COVID-19</h4>
+                        <p class="card-text">Методы извлечения признаков из звука кашля, а также последующее обучение нейронных сетей для определения является ли кашель COVID положительным или отрицательным.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card article-card border-light mb-3">
+                    <div class="card-header">
+                        <a href="https://www.elibrary.ru/item.asp?id=49432630" class="btn btn-link">Читаем статью</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Анализ производственных рисков</h4>
+                        <p class="card-text">Мониторинг и анализ производственных рисков на предприятии на примере защиты головы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card article-card border-light mb-3">
+                    <div class="card-header">
+                        <a href="https://www.elibrary.ru/item.asp?id=67981460" class="btn btn-link">Читаем статью</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Имитационное моделирование движения на перекрёстке</h4>
+                        <p class="card-text">В данной статье рассматривается перекрёсток с относительно плотным движением и высокой частотой ДТП. Работа, описываемая в этой статье, заключается в оптимизации движения дорожного потока и повышения пропускной способности перекрёстка Строителей-Шевченко г. Альметьевск (Республика Татарстан). </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Футер с иконками соцсетей, картой и формой обратной связи -->
+<footer class="footer">
+    <div class="container-lg">
+        <div class="row text-center text-lg-start">
+            <!-- Соцсети (иконки) -->
+            <div class="col-lg-3 mb-3 social-icons">
+                <h3>Подписывайтесь на меня:</h3>
+                <a href="https://vk.com/shishkoder"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/Shishkoder"><i class="fab fa-telegram"></i></a>
+                <a href="https://github.com/Shishkoder"><i class="fab fa-github"></i></a>
+            </div>
+
+            <!-- Карта -->
+            <div class="col-lg-5 mb-3">
+                <h3>Моя геолокация:</h3>
+                <div id="map" style="width:100%;height:75%;">
+                    <!-- Карта будет добавлена позже -->
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                ymaps.ready(init);
+
+                function init() {
+                    // Координаты (широта, долгота) для статического адреса (Москва, Красная площадь)
+                    var myMap = new ymaps.Map("map", {
+                        center: [54.897765114450976, 52.286878440203424], // Координаты центра карты
+                        zoom: 16 // Уровень масштабирования карты
+                    });
+
+                    // Создание метки
+                    var myPlacemark = new ymaps.Placemark([54.897765114450976, 52.286878440203424], {
+                        balloonContent: 'ПАО "Татнефть", Альметьевск'
+                    }, {
+                        preset: 'islands#icon',
+                        iconColor: '#0095b6'
+                    });
+
+                    // Добавление метки на карту
+                    myMap.geoObjects.add(myPlacemark);
+                }
+            </script>
+
+            <!-- Форма обратной связи -->
+            <div class="col-lg-4 mb-3">
+                <h3>Свяжитесь со мной</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+                    </div>
+
+                    <div class="mb-3 has-danger">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email"
+                               placeholder="Введите ваш email">
+                        <div class="invalid-feedback">Некорректно введён email!</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="3"
+                                  placeholder="Введите ваше сообщение"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-light">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../static/js/bootstrap.bundle.js"></script>
+<script src="../static/js/script.js"></script>
+
+</body>
+</html>
